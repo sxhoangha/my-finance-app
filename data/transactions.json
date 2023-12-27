@@ -1,0 +1,62 @@
+[
+  {
+    "transactionDate": "2022-01-01",
+    "description": "Salary",
+    "referenceNumber": "TRX001",
+    "amount": 5000
+  },
+  {
+    "transactionDate": "2022-01-02",
+    "description": "Rent",
+    "referenceNumber": "TRX002",
+    "amount": -1000
+  },
+  {
+    "transactionDate": "2022-01-03",
+    "description": "Groceries",
+    "referenceNumber": "TRX003",
+    "amount": -200
+  },
+  {
+    "transactionDate": "2022-01-04",
+    "description": "Dinner",
+    "referenceNumber": "TRX004",
+    "amount": -50
+  },
+  {
+    "transactionDate": "2022-01-05",
+    "description": "Gasoline",
+    "referenceNumber": "TRX005",
+    "amount": -40
+  },
+  {
+    "transactionDate": "2022-01-06",
+    "description": "Bonus",
+    "referenceNumber": "TRX006",
+    "amount": 1000
+  },
+  {
+    "transactionDate": "2022-01-07",
+    "description": "Shopping",
+    "referenceNumber": "TRX007",
+    "amount": -300
+  },
+  {
+    "transactionDate": "2022-01-08",
+    "description": "Utilities",
+    "referenceNumber": "TRX008",
+    "amount": -150
+  },
+  {
+    "transactionDate": "2022-01-09",
+    "description": "Investment",
+    "referenceNumber": "TRX009",
+    "amount": -500
+  },
+  {
+    "transactionDate": "2022-01-10",
+    "description": "Interest",
+    "referenceNumber": "TRX010",
+    "amount": 200
+  }
+]
