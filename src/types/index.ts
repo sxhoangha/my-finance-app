@@ -1,7 +1,7 @@
 import { Entity } from "fakebase";
 
 interface ITransaction extends Entity {
-  date: Date;
+  transactionDate: Date;
   description: string;
   referenceNumber: string;
   amount: number;

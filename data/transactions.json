@@ -58,5 +58,71 @@
     "description": "Interest",
     "referenceNumber": "TRX010",
     "amount": 200
+  },
+  {
+    "transactionDate": "2022-01-11",
+    "description": "Phone Bill",
+    "referenceNumber": "TRX011",
+    "amount": -80
+  },
+  {
+    "transactionDate": "2022-01-12",
+    "description": "Salary",
+    "referenceNumber": "TRX012",
+    "amount": 5000
+  },
+  {
+    "transactionDate": "2022-01-13",
+    "description": "Rent",
+    "referenceNumber": "TRX013",
+    "amount": -1000
+  },
+  {
+    "transactionDate": "2022-01-14",
+    "description": "Groceries",
+    "referenceNumber": "TRX014",
+    "amount": -200
+  },
+  {
+    "transactionDate": "2022-01-15",
+    "description": "Dinner",
+    "referenceNumber": "TRX015",
+    "amount": -50
+  },
+  {
+    "transactionDate": "2022-01-16",
+    "description": "Gasoline",
+    "referenceNumber": "TRX016",
+    "amount": -40
+  },
+  {
+    "transactionDate": "2022-01-17",
+    "description": "Bonus",
+    "referenceNumber": "TRX017",
+    "amount": 1000
+  },
+  {
+    "transactionDate": "2022-01-18",
+    "description": "Shopping",
+    "referenceNumber": "TRX018",
+    "amount": -300
+  },
+  {
+    "transactionDate": "2022-01-19",
+    "description": "Utilities",
+    "referenceNumber": "TRX019",
+    "amount": -150
+  },
+  {
+    "transactionDate": "2022-01-20",
+    "description": "Investment",
+    "referenceNumber": "TRX020",
+    "amount": -500
+  },
+  {
+    "transactionDate": "2022-01-21",
+    "description": "Interest",
+    "referenceNumber": "TRX021",
+    "amount": 200
   }
 ]
