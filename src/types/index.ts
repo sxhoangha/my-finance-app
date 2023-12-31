@@ -12,7 +12,7 @@ interface IInvoice extends Entity {
   creationDate: Date;
   referenceNumber: string;
   amount: number;
-  status: "PAID" | "NOT PAID";
+  status?: "PAID" | "NOT PAID";
 }
 
 export type { ITransaction, IInvoice };

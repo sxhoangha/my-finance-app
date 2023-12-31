@@ -35,7 +35,7 @@ const Summary = ({ transactions }: SummaryProps) => {
       <div>
         Account balance:{" "}
         <span style={{ color: color }}>
-          {balance} <Button onClick={handleOpen}>View transactions</Button>
+          {balance} <Button onClick={handleOpen}>Transaction details</Button>
         </span>
       </div>
       <TextField

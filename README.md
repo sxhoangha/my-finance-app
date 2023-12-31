@@ -20,17 +20,38 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## App details
 
-To learn more about Next.js, take a look at the following resources:
+This app helps self-employed individuals to track their income and expenses in order to give them better insights into their monetary situation, so they can focus on what they love doing without worrying about their finances!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+It has:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. A widget (Summary Widget) to track a summary of the customer’s financial status.
 
-## Deploy on Vercel
+   - It should read the data from the list of transactions from the customer’s bank account.
+   - Each transaction contains:
+     - Transaction date
+     - Description
+     - Unique reference number
+     - Monetary amount (positive for cash in, negative for cash out)
+   - The widget should show the total monetary amount in the bank account based on the transaction data.
+     - If the total is greater than a configured positive threshold, the number should be shown in green.
+     - If the total is lower than the configured threshold (but still positive), the number should be shown in yellow.
+     - If the total is lower than 0.00, the number should be shown in red.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. One widget (Invoices Widget) to manage the list of invoices the user has for their customers, supporting both editing existing invoices and creating new ones.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   - Each invoice contains:
+     - Name of the client
+     - Creation date
+     - Unique reference number
+     - Monetary amount (positive for money to be received, negative for a refund to the customer)
+     - Status (PAID or NOT PAID)
+   - Every field should be modifiable, except the invoice status which is read-only and is determined as follows:
+     - An invoice is considered PAID if there is a bank transaction for the same amount, with the bank transaction’s reference number being equal to the invoice’s reference number, and with the bank transaction date being later than the invoice creation date.
+     - An invoice is considered NOT PAID if the above criteria are not met.
+   - Users should be able to create a new invoice.
+
+3. Other Requirements:
+   - The Summary widget should also show the number of invoices created in the last 30 days.
+   - Changes in one widget should automatically update other widgets. For example, the creation of an invoice should affect the summary widget, as it shows the number of invoices created in the month.

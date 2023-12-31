@@ -1,128 +1,107 @@
 [
   {
-    "transactionDate": "2022-01-01",
+    "id": "1a3e4b5c-6d7e-8f9a-bcde-0123456789ab",
+    "transactionDate": "2022-01-02",
     "description": "Salary",
     "referenceNumber": "TRX001",
     "amount": 5000
   },
   {
+    "id": "2b4d6f8a-0c2e-4g6i-8k0m-123456789abc",
     "transactionDate": "2022-01-02",
     "description": "Rent",
     "referenceNumber": "TRX002",
     "amount": -1000
   },
   {
+    "id": "3c5e7g9i-1a3c-5e7g-9i1k-23456789abcd",
     "transactionDate": "2022-01-03",
     "description": "Groceries",
     "referenceNumber": "TRX003",
     "amount": -200
   },
   {
+    "id": "4d6f8h0j-2b4d-6f8h-0j2l-3456789abcd",
     "transactionDate": "2022-01-04",
     "description": "Dinner",
     "referenceNumber": "TRX004",
     "amount": -50
   },
   {
+    "id": "5e7g9i1k-3c5e-7g9i-1k3m-456789abcde",
     "transactionDate": "2022-01-05",
     "description": "Gasoline",
     "referenceNumber": "TRX005",
     "amount": -40
   },
   {
+    "id": "6f8h0j2l-4d6f-8h0j-2l4n-56789abcdef",
     "transactionDate": "2022-01-06",
     "description": "Bonus",
     "referenceNumber": "TRX006",
     "amount": 1000
   },
   {
+    "id": "7g9i1k3m-5e7g-9i1k-3m5o-6789abcdefg",
     "transactionDate": "2022-01-07",
     "description": "Shopping",
     "referenceNumber": "TRX007",
     "amount": -300
   },
   {
+    "id": "8h0j2l4n-6f8h-0j2l-4n6p-789abcdefgh",
     "transactionDate": "2022-01-08",
     "description": "Utilities",
     "referenceNumber": "TRX008",
     "amount": -150
   },
   {
+    "id": "9i1k3m5o-7g9i-1k3m-5o7q-89abcdefghi",
     "transactionDate": "2022-01-09",
     "description": "Investment",
     "referenceNumber": "TRX009",
     "amount": -500
   },
   {
+    "id": "0j2l4n6p-8h0j-2l4n-6p8r-9abcdefghij",
     "transactionDate": "2022-01-10",
     "description": "Interest",
     "referenceNumber": "TRX010",
     "amount": 200
   },
   {
+    "id": "1k3m5o7q-9i1k-3m5o-7q9s-abcdefghijk",
     "transactionDate": "2022-01-11",
     "description": "Phone Bill",
     "referenceNumber": "TRX011",
     "amount": -80
   },
   {
+    "id": "2l4n6p8r-0j2l-4n6p-8r0t-bcdefghijklm",
     "transactionDate": "2022-01-12",
     "description": "Salary",
     "referenceNumber": "TRX012",
     "amount": 5000
   },
   {
+    "id": "3m5o7q9s-1k3m-5o7q-9s1u-cdefghijklmn",
     "transactionDate": "2022-01-13",
     "description": "Rent",
     "referenceNumber": "TRX013",
     "amount": -1000
   },
   {
+    "id": "4n6p8r0t-2l4n-6p8r-0t2v-defghijklmno",
     "transactionDate": "2022-01-14",
     "description": "Groceries",
     "referenceNumber": "TRX014",
     "amount": -200
   },
   {
+    "id": "5o7q9s1u-3m5o-7q9s-1u3w-efghijklmnop",
     "transactionDate": "2022-01-15",
     "description": "Dinner",
     "referenceNumber": "TRX015",
     "amount": -50
-  },
-  {
-    "transactionDate": "2022-01-16",
-    "description": "Gasoline",
-    "referenceNumber": "TRX016",
-    "amount": -40
-  },
-  {
-    "transactionDate": "2022-01-17",
-    "description": "Bonus",
-    "referenceNumber": "TRX017",
-    "amount": 1000
-  },
-  {
-    "transactionDate": "2022-01-18",
-    "description": "Shopping",
-    "referenceNumber": "TRX018",
-    "amount": -300
-  },
-  {
-    "transactionDate": "2022-01-19",
-    "description": "Utilities",
-    "referenceNumber": "TRX019",
-    "amount": -150
-  },
-  {
-    "transactionDate": "2022-01-20",
-    "description": "Investment",
-    "referenceNumber": "TRX020",
-    "amount": -500
-  },
-  {
-    "transactionDate": "2022-01-21",
-    "description": "Interest",
-    "referenceNumber": "TRX021",
-    "amount": 200
   }
 ]
