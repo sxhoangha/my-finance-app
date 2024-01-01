@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
 import { ITransaction } from "@/types";
+import { formatDate } from "../utils";
 
 const style = {
   position: "absolute" as "absolute",
@@ -28,15 +29,10 @@ interface SummaryModalProps {
 const SummaryModal: React.FC<SummaryModalProps> = (props) => {
   const { transactions, open, handleClose } = props;
 
-  const rows: GridRowsProp = transactions.map(
-    ({ referenceNumber, amount, description, transactionDate }) => ({
-      id: referenceNumber,
-      referenceNumber: referenceNumber,
-      amount: amount,
-      description: description,
-      transactionDate: transactionDate,
-    })
-  );
+  const rows: GridRowsProp = transactions.map((transaction) => ({
+    ...transaction,
+    transactionDate: formatDate(transaction.transactionDate),
+  }));
 
   const columns: GridColDef[] = [
     { field: "referenceNumber", headerName: "Reference Number", width: 150 },
