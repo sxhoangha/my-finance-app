@@ -52,7 +52,7 @@ const updateInvoiceInDb = async (
 };
 
 const formatDate = (date: string | Date) => {
-  const DATE_FORMAT = "MMMM D, YYYY";
+  const DATE_FORMAT = "MMM D, YYYY H:mm";
   const dayjsDate = dayjs(date);
   return dayjsDate.isValid() ? dayjsDate.format(DATE_FORMAT) : "";
 };

@@ -1,12 +1,19 @@
 "use client";
+import axios from "axios";
+import React, { useState } from "react";
 import { IInvoice } from "@/types";
 import { Button } from "@mui/material";
-import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
-import React, { useState } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+import EditIcon from "@mui/icons-material/Edit";
+import {
+  DataGrid,
+  GridRowsProp,
+  GridColDef,
+  GridRowId,
+  GridActionsCellItem,
+} from "@mui/x-data-grid";
 import NewInvoice from "./NewInvoice";
 import { formatDate } from "../utils";
-import axios from "axios";
-import CircularProgress from "@mui/material/CircularProgress";
 
 interface InvoicesProps {
   invoices: Array<IInvoice>;
@@ -15,24 +22,69 @@ interface InvoicesProps {
 const getRows = (invoices: Array<IInvoice>) => {
   return invoices.map((invoice) => ({
     ...invoice,
-    creationDate: formatDate(invoice.creationDate),
+    displayDate: formatDate(invoice.creationDate),
   }));
 };
 
 const Invoices = ({ invoices }: InvoicesProps) => {
   const [openModal, setOpenModal] = useState(false);
+  const [invoiceToEdit, setInvoiceToEdit] = useState<IInvoice | null>(null);
   const [rows, setRows] = useState<GridRowsProp>(getRows(invoices));
   const [loading, setLoading] = useState(false);
 
+  //Modal handlers
   const handleOpen = () => setOpenModal(true);
   const handleClose = () => setOpenModal(false);
 
+  //DataGrid handlers
+  const handleEditClick = (id: GridRowId) => () => {
+    const invoiceToEdit =
+      (rows as Array<IInvoice>).find((invoice) => invoice.id === id) ?? null;
+
+    setInvoiceToEdit(invoiceToEdit);
+    handleOpen();
+  };
+
   const columns: GridColDef[] = [
-    { field: "referenceNumber", headerName: "Reference number", width: 150 },
-    { field: "amount", headerName: "Amount", width: 150 },
-    { field: "status", headerName: "Status", width: 150 },
-    { field: "clientName", headerName: "Client name", width: 150 },
-    { field: "creationDate", headerName: "Creation date", width: 150 },
+    {
+      field: "referenceNumber",
+      headerName: "Reference number",
+      width: 150,
+      editable: true,
+    },
+    { field: "amount", headerName: "Amount", width: 150, editable: true },
+    { field: "status", headerName: "Status", width: 120 },
+    {
+      field: "clientName",
+      headerName: "Client name",
+      width: 150,
+      editable: true,
+    },
+    {
+      field: "displayDate",
+      headerName: "Date",
+      width: 170,
+      editable: true,
+    },
+    {
+      field: "actions",
+      type: "actions",
+      headerName: "Actions",
+      width: 100,
+      cellClassName: "actions",
+      getActions: ({ id }) => {
+        return [
+          <GridActionsCellItem
+            key="edit"
+            icon={<EditIcon />}
+            label="Edit"
+            className="textPrimary"
+            onClick={handleEditClick(id)}
+            color="inherit"
+          />,
+        ];
+      },
+    },
   ];
 
   const fetchInvoices = async () => {
@@ -53,6 +105,11 @@ const Invoices = ({ invoices }: InvoicesProps) => {
     fetchInvoices();
   };
 
+  const addNewInvoiceClick = () => {
+    setInvoiceToEdit(null);
+    handleOpen();
+  };
+
   return (
     <div className="fi-invoices">
       {loading ? (
@@ -60,7 +117,7 @@ const Invoices = ({ invoices }: InvoicesProps) => {
       ) : (
         <div className="fi-invoices-main">
           <h2>Invoices</h2>
-          <Button variant="outlined" onClick={handleOpen}>
+          <Button variant="outlined" onClick={addNewInvoiceClick}>
             New invoice
           </Button>
 
@@ -77,6 +134,7 @@ const Invoices = ({ invoices }: InvoicesProps) => {
             handleOpen={handleOpen}
             handleClose={handleClose}
             onAddInvoiceSuccess={onAddInvoiceSuccess}
+            invoiceToEdit={invoiceToEdit}
           />
         </div>
       )}

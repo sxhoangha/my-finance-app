@@ -1,25 +1,27 @@
+import axios from "axios";
+import dayjs from "dayjs";
+import { Formik, Form, Field } from "formik";
 import React from "react";
+import { TextField } from "formik-mui";
+import { DatePicker } from "formik-mui-x-date-pickers";
+import { IInvoice } from "@/types";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Formik, Form, Field } from "formik";
-import { TextField } from "formik-mui";
 import { LinearProgress } from "@mui/material";
-import { DatePicker } from "formik-mui-x-date-pickers";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import dayjs from "dayjs";
-import axios from "axios";
+import "./NewInvoice.scss";
 
 const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "45rem",
+  width: "22rem",
   bgcolor: "background.paper",
-  border: "2px solid #000",
+  border: "1px solid #000",
   boxShadow: 24,
   p: 4,
 };
@@ -36,16 +38,26 @@ interface NewInvoiceProps {
   handleClose: () => void;
   handleOpen: () => void;
   onAddInvoiceSuccess: () => void;
+  invoiceToEdit: IInvoice | null;
 }
 
-const NewInvoice: React.FC<NewInvoiceProps> = (props) => {
-  const { open, handleClose, onAddInvoiceSuccess } = props;
-
-  const addNewInvoice = async (values: FormValues) => {
+const NewInvoice = ({
+  open,
+  handleClose,
+  onAddInvoiceSuccess,
+  invoiceToEdit,
+}: NewInvoiceProps) => {
+  const addOrEditInvoice = async (values: FormValues) => {
+    const apiRequest = invoiceToEdit ? axios.put : axios.post;
+    const payload = {
+      ...values,
+      ...(invoiceToEdit ? { id: invoiceToEdit.id } : {}),
+    };
     try {
-      const response = await axios.post("/api/invoices", values);
-
-      onAddInvoiceSuccess();
+      const response = await apiRequest("/api/invoices", payload);
+      if (response.status === 200) {
+        onAddInvoiceSuccess();
+      }
     } catch (error) {
       console.error(error);
     }
@@ -54,7 +66,7 @@ const NewInvoice: React.FC<NewInvoiceProps> = (props) => {
   const handleSubmit = (values: FormValues, { setSubmitting }: any) => {
     setTimeout(() => {
       setSubmitting(false);
-      addNewInvoice(values);
+      addOrEditInvoice(values);
     }, 500);
   };
 
@@ -76,27 +88,27 @@ const NewInvoice: React.FC<NewInvoiceProps> = (props) => {
     return errors;
   };
 
+  const { clientName, creationDate, referenceNumber, amount } =
+    invoiceToEdit ?? {};
+
+  const initialValues = {
+    clientName: clientName ?? "",
+    creationDate: creationDate ?? new Date(),
+    referenceNumber: referenceNumber ?? "",
+    amount: amount ?? "",
+  };
+
   return (
-    <div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
+    <div className="fi-new-invoice">
+      <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h5">
-            Add new invoice
+            {invoiceToEdit ? "Edit invoice" : "Add new invoice"}
           </Typography>
           <div style={{ margin: "1rem 1rem" }}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <Formik
-                initialValues={{
-                  clientName: "",
-                  creationDate: new Date(),
-                  referenceNumber: "",
-                  amount: 0,
-                }}
+                initialValues={initialValues}
                 validate={validateForm}
                 onSubmit={handleSubmit}
               >
@@ -107,6 +119,7 @@ const NewInvoice: React.FC<NewInvoiceProps> = (props) => {
                       name="clientName"
                       type="text"
                       label="Client name"
+                      fullWidth
                     />
                     <div style={{ height: "0.5rem" }} />
                     <Field
@@ -114,10 +127,7 @@ const NewInvoice: React.FC<NewInvoiceProps> = (props) => {
                       value={dayjs(values.creationDate)}
                       name="creationDate"
                       label="Date"
-                      textField={{
-                        helperText: "Helper text",
-                        variant: "filled",
-                      }}
+                      fullWidth
                     />
                     <div style={{ height: "0.5rem" }} />
                     <Field
@@ -125,6 +135,7 @@ const NewInvoice: React.FC<NewInvoiceProps> = (props) => {
                       name="referenceNumber"
                       label="Reference number"
                       type="text"
+                      fullWidth
                     />
                     <div style={{ height: "0.5rem" }} />
                     <Field
@@ -132,6 +143,7 @@ const NewInvoice: React.FC<NewInvoiceProps> = (props) => {
                       name="amount"
                       label="Amount"
                       type="number"
+                      fullWidth
                     />
                     <div style={{ height: "0.5rem" }} />
                     {isSubmitting && <LinearProgress />}
@@ -142,7 +154,7 @@ const NewInvoice: React.FC<NewInvoiceProps> = (props) => {
                       disabled={isSubmitting}
                       onClick={submitForm}
                     >
-                      Add
+                      {invoiceToEdit ? "Save" : "Add"}
                     </Button>
                     <Button onClick={handleClose}>Cancel</Button>
                   </Form>

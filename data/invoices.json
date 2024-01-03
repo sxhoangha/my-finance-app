@@ -1,58 +1,26 @@
 [
   {
-    "id": "A-saSXwUID-JEQnq-Kz4V",
-    "clientName": "ha",
-    "creationDate": "2021-01-01T16:06:42.695Z",
+    "clientName": "hoang",
+    "creationDate": "2021-11-01T14:20:04.961Z",
     "referenceNumber": "TRX001",
     "amount": 5000,
+    "id": "g_LOYCFKgXH9M2PTyF5u9",
     "status": "PAID"
   },
   {
-    "id": "NQIHrAifaNYINaDTJ1uFG",
-    "clientName": "landlord",
-    "creationDate": "2021-01-01T17:17:07.368Z",
-    "referenceNumber": "TRX002",
-    "amount": -1000,
-    "status": "PAID"
-  },
-  {
-    "id": "VIhoXJdR57ERRoeYVvl4W",
     "clientName": "test",
-    "creationDate": "2024-01-01T18:11:14.697Z",
-    "referenceNumber": "23423",
-    "amount": 234232,
+    "creationDate": "2024-01-01T15:31:03.000Z",
+    "referenceNumber": "dfdf",
+    "amount": 234,
+    "id": "-jIo31CtDOBQn4nGWLsNa",
     "status": "NOT PAID"
   },
   {
-    "id": "Bdy5xxHrGAC7pHVrOQ_QI",
-    "clientName": "4",
-    "creationDate": "2024-01-01T18:11:51.900Z",
-    "referenceNumber": "4",
-    "amount": 333,
-    "status": "NOT PAID"
-  },
-  {
-    "id": "35mWYxnt5fUH75BMApt-U",
-    "clientName": "5",
-    "creationDate": "2024-01-01T18:14:15.960Z",
-    "referenceNumber": "555",
-    "amount": 555,
-    "status": "NOT PAID"
-  },
-  {
-    "id": "ssvgeZoUlt40MpF7QKs8v",
-    "clientName": "6",
-    "creationDate": "2024-01-01T18:15:31.825Z",
-    "referenceNumber": "666",
-    "amount": 6666,
-    "status": "NOT PAID"
-  },
-  {
-    "id": "trR01-3RYl89LRluQ70YE",
-    "clientName": "7",
-    "creationDate": "2024-01-01T18:18:16.267Z",
-    "referenceNumber": "777",
-    "amount": 7777,
+    "clientName": "22",
+    "creationDate": "2024-01-04T15:33:44.000Z",
+    "referenceNumber": "222",
+    "amount": 2222,
+    "id": "MHsUd6fIJltEukFclibzu",
     "status": "NOT PAID"
   }
 ]
