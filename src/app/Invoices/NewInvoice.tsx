@@ -12,7 +12,6 @@ import Button from "@mui/material/Button";
 import { LinearProgress } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import "./NewInvoice.scss";
 
 const style = {
   position: "absolute",
