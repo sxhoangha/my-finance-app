@@ -1,8 +1,6 @@
 import styles from "./page.module.css";
-import Nav from "./Nav";
-import Summary from "./Summary/Summary";
-import Invoices from "./Invoices/Invoices";
 import { TransactionsData, InvoicesData } from "../../db";
+import MyApp from "./MyApp";
 
 export default async function Home() {
   const transactions = await TransactionsData.findAll();
@@ -10,9 +8,7 @@ export default async function Home() {
 
   return (
     <div className={styles.main}>
-      <Nav />
-      <Summary transactions={transactions} />
-      <Invoices invoices={invoices} />
+      <MyApp transactions={transactions} invoices={invoices} />
     </div>
   );
 }

@@ -17,19 +17,12 @@ import { formatDate } from "../utils";
 
 interface InvoicesProps {
   invoices: Array<IInvoice>;
+  setInvoices: React.Dispatch<React.SetStateAction<IInvoice[]>>;
 }
 
-const getRows = (invoices: Array<IInvoice>) => {
-  return invoices.map((invoice) => ({
-    ...invoice,
-    displayDate: formatDate(invoice.creationDate),
-  }));
-};
-
-const Invoices = ({ invoices }: InvoicesProps) => {
+const Invoices = ({ invoices, setInvoices }: InvoicesProps) => {
   const [openModal, setOpenModal] = useState(false);
   const [invoiceToEdit, setInvoiceToEdit] = useState<IInvoice | null>(null);
-  const [rows, setRows] = useState<GridRowsProp>(getRows(invoices));
   const [loading, setLoading] = useState(false);
 
   //Modal handlers
@@ -38,12 +31,15 @@ const Invoices = ({ invoices }: InvoicesProps) => {
 
   //DataGrid handlers
   const handleEditClick = (id: GridRowId) => () => {
-    const invoiceToEdit =
-      (rows as Array<IInvoice>).find((invoice) => invoice.id === id) ?? null;
-
+    const invoiceToEdit = rows.find((invoice) => invoice.id === id) ?? null;
     setInvoiceToEdit(invoiceToEdit);
     handleOpen();
   };
+
+  const rows = invoices.map((invoice) => ({
+    ...invoice,
+    displayDate: formatDate(invoice.creationDate),
+  }));
 
   const columns: GridColDef[] = [
     {
@@ -92,7 +88,7 @@ const Invoices = ({ invoices }: InvoicesProps) => {
     try {
       const response = await axios.get("/api/invoices");
       const invoices = response.data.invoices;
-      setRows(getRows(invoices));
+      setInvoices(invoices);
     } catch (error) {
       console.error("Error fetching invoices:", error);
     } finally {
@@ -116,7 +112,7 @@ const Invoices = ({ invoices }: InvoicesProps) => {
         <CircularProgress />
       ) : (
         <div className="fi-invoices-main">
-          <h2>Invoices</h2>
+          <h4>Invoices</h4>
           <Button variant="outlined" onClick={addNewInvoiceClick}>
             New invoice
           </Button>

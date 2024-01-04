@@ -1,16 +1,18 @@
 "use client";
+import dayjs from "dayjs";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { ITransaction } from "@/types";
+import { IInvoice, ITransaction } from "@/types";
 import { BalanceColor } from "@/types/constants";
 import React, { useState } from "react";
 import SummaryModal from "./SummaryModal";
 
 interface SummaryProps {
   transactions: Array<ITransaction>;
+  invoices: Array<IInvoice>;
 }
 
-const Summary = ({ transactions }: SummaryProps) => {
+const Summary = ({ transactions, invoices }: SummaryProps) => {
   const [threshold, setThreshold] = useState(0);
 
   const [openModal, setOpenModal] = useState(false);
@@ -29,14 +31,24 @@ const Summary = ({ transactions }: SummaryProps) => {
       : BalanceColor.GREEN;
 
   return (
-    <div>
-      <h2>Summary</h2>
-      <p>Here is a summary of your account</p>
+    <div className="fi-summary">
+      <h4>Summary</h4>
+
       <div>
         Account balance:{" "}
         <span style={{ color: color }}>
           {balance} <Button onClick={handleOpen}>Transaction details</Button>
         </span>
+      </div>
+      <div>Total number of transactions: {transactions.length}</div>
+
+      <div>
+        Total number of invoices:{" "}
+        {
+          invoices.filter(({ creationDate }) =>
+            dayjs(creationDate).isAfter(dayjs(new Date()).subtract(30, "day"))
+          ).length
+        }
       </div>
       <TextField
         id="threshold"
