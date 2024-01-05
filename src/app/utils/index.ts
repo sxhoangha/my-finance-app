@@ -1,5 +1,5 @@
 import { IInvoice, ITransaction } from "@/types";
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import { Table } from "fakebase";
 
 const getInvoiceStatus = async (
@@ -13,7 +13,6 @@ const getInvoiceStatus = async (
   );
 
   if (transaction) {
-    console.log("transaction", transaction, invoice);
     //PAID if there is a bank transaction for the same amount,
     //and transaction date later than the invoice creation date.
     const { transactionDate, amount } = transaction;
@@ -24,7 +23,6 @@ const getInvoiceStatus = async (
   return "NOT PAID";
 };
 
-//test, add return correct status
 const addInvoiceToDb = async (
   invoice: IInvoice,
   invoicesData: Table<IInvoice>,

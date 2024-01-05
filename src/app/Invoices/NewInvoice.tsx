@@ -73,17 +73,16 @@ const NewInvoice = ({
     const errors: Partial<FormValues> = {};
     if (!values.clientName) {
       errors.clientName = "Required";
-      if (!dayjs(values.creationDate).isValid) {
-        errors.creationDate = "Required";
-      }
-      if (!values.referenceNumber) {
-        errors.referenceNumber = "Required";
-      }
-      if (!values.amount) {
-        errors.amount = "Required";
-      }
     }
-
+    if (!dayjs(values.creationDate).isValid) {
+      errors.creationDate = "Required";
+    }
+    if (!values.referenceNumber) {
+      errors.referenceNumber = "Required";
+    }
+    if (values.amount === "") {
+      errors.amount = "Required";
+    }
     return errors;
   };
 

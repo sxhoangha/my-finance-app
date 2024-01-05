@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
 import { IInvoice, ITransaction } from "@/types";
+import { useState } from "react";
+import Invoices from "./Invoices/Invoices";
 import Nav from "./Nav";
 import Summary from "./Summary/Summary";
-import Invoices from "./Invoices/Invoices";
+import "./MyApp.scss";
 
 interface MyAppProps {
   transactions: Array<ITransaction>;

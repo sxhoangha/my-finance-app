@@ -8,51 +8,11 @@
     "status": "PAID"
   },
   {
-    "clientName": "test",
-    "creationDate": "2024-01-01T15:31:03.000Z",
-    "referenceNumber": "dfdf",
-    "amount": 234,
-    "id": "-jIo31CtDOBQn4nGWLsNa",
-    "status": "NOT PAID"
-  },
-  {
-    "clientName": "22",
-    "creationDate": "2024-01-04T15:33:44.000Z",
-    "referenceNumber": "222",
-    "amount": 2222,
-    "id": "MHsUd6fIJltEukFclibzu",
-    "status": "NOT PAID"
-  },
-  {
-    "id": "YHQTta1mBUThBizZ5ZBuJ",
-    "clientName": "333",
-    "creationDate": "2024-01-04T03:25:46.238Z",
-    "referenceNumber": "33",
-    "amount": 333,
-    "status": "NOT PAID"
-  },
-  {
-    "id": "urJ8tH81HmlCFgZy6nucD",
-    "clientName": "444",
-    "creationDate": "2024-01-04T03:28:53.524Z",
-    "referenceNumber": "444",
-    "amount": 44,
-    "status": "NOT PAID"
-  },
-  {
-    "id": "fboqdAL0RAHsmZJHMS7tq",
-    "clientName": "555",
-    "creationDate": "2024-01-04T03:33:55.221Z",
-    "referenceNumber": "55555",
-    "amount": 555,
-    "status": "NOT PAID"
-  },
-  {
-    "id": "RF-KZi79GvIUek2H2tLyg",
-    "clientName": "abc",
-    "creationDate": "2023-12-02T03:46:06.000Z",
-    "referenceNumber": "2432",
-    "amount": 3432,
+    "id": "64uj94Bgpo0qffLtzTxmD",
+    "clientName": "111",
+    "creationDate": "2024-01-05T03:22:31.449Z",
+    "referenceNumber": "111",
+    "amount": 11,
     "status": "NOT PAID"
   }
 ]

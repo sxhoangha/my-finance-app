@@ -7,13 +7,13 @@ import CircularProgress from "@mui/material/CircularProgress";
 import EditIcon from "@mui/icons-material/Edit";
 import {
   DataGrid,
-  GridRowsProp,
   GridColDef,
   GridRowId,
   GridActionsCellItem,
 } from "@mui/x-data-grid";
 import NewInvoice from "./NewInvoice";
 import { formatDate } from "../utils";
+import Tooltip from "@mui/material/Tooltip";
 
 interface InvoicesProps {
   invoices: Array<IInvoice>;
@@ -68,14 +68,19 @@ const Invoices = ({ invoices, setInvoices }: InvoicesProps) => {
       headerName: "Actions",
       width: 100,
       cellClassName: "actions",
-      getActions: ({ id }) => {
+      getActions: (item) => {
+        const title = `Edit invoice ${item.row.referenceNumber}`;
         return [
           <GridActionsCellItem
             key="edit"
-            icon={<EditIcon />}
+            icon={
+              <Tooltip title={title}>
+                <EditIcon />
+              </Tooltip>
+            }
             label="Edit"
             className="textPrimary"
-            onClick={handleEditClick(id)}
+            onClick={handleEditClick(item.id)}
             color="inherit"
           />,
         ];
@@ -112,7 +117,7 @@ const Invoices = ({ invoices, setInvoices }: InvoicesProps) => {
         <CircularProgress />
       ) : (
         <div className="fi-invoices-main">
-          <h4>Invoices</h4>
+          <h4 className="fi-invoices-title">Invoices</h4>
           <Button variant="outlined" onClick={addNewInvoiceClick}>
             New invoice
           </Button>
