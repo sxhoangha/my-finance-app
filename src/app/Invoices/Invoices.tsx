@@ -24,7 +24,6 @@ const Invoices = ({ invoices, setInvoices }: InvoicesProps) => {
   const [openModal, setOpenModal] = useState(false);
   const [invoiceToEdit, setInvoiceToEdit] = useState<IInvoice | null>(null);
   const [loading, setLoading] = useState(false);
-
   //Modal handlers
   const handleOpen = () => setOpenModal(true);
   const handleClose = () => setOpenModal(false);
@@ -121,15 +120,16 @@ const Invoices = ({ invoices, setInvoices }: InvoicesProps) => {
           <Button variant="outlined" onClick={addNewInvoiceClick}>
             New invoice
           </Button>
-
-          <DataGrid
-            rows={rows}
-            columns={columns}
-            initialState={{
-              pagination: { paginationModel: { pageSize: 10 } },
-            }}
-            pageSizeOptions={[5, 10]}
-          />
+          <div className="fi-invoices-table">
+            <DataGrid
+              rows={rows}
+              columns={columns}
+              initialState={{
+                pagination: { paginationModel: { pageSize: 10 } },
+              }}
+              pageSizeOptions={[5, 10]}
+            />
+          </div>
           <NewInvoice
             open={openModal}
             handleOpen={handleOpen}

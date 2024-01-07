@@ -1,5 +1,3 @@
-// import { IInvoice, ITransaction } from "@/types";
-// import { Table } from "fakebase";
 import { getInvoiceStatus } from "../index";
 
 describe("getInvoiceStatus", () => {

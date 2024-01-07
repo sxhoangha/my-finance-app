@@ -1,13 +1,13 @@
 "use client";
-import dayjs from "dayjs";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
 import { IInvoice, ITransaction } from "@/types";
-import { BalanceColor } from "@/types/constants";
-import React, { useState } from "react";
-import SummaryModal from "./SummaryModal";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+import IconButton from "@mui/material/IconButton";
+import TextField from "@mui/material/TextField";
 import Tooltip from "@mui/material/Tooltip";
+import dayjs from "dayjs";
+import React, { useState } from "react";
+import { BalanceColor } from "../../types/constants";
+import SummaryModal from "./SummaryModal";
 
 interface SummaryProps {
   transactions: Array<ITransaction>;
@@ -54,9 +54,9 @@ const Summary = ({ transactions, invoices }: SummaryProps) => {
       <div>
         Total number of transactions: {transactions.length}{" "}
         <Tooltip title="Transaction details">
-          <Button onClick={handleOpen}>
+          <IconButton onClick={handleOpen}>
             <ReceiptLongIcon />
-          </Button>
+          </IconButton>
         </Tooltip>
       </div>
 

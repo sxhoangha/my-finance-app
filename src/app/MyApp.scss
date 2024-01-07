@@ -11,8 +11,15 @@
   }
 
   .fi-invoices {
+    width: 100%;
     &-title {
       margin-bottom: 0.5rem;
+    }
+    &-main {
+      width: 100%;
+      .fi-invoices-table {
+        margin-top: 0.5rem;
+      }
     }
   }
 }
