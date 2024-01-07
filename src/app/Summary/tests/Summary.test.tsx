@@ -1,8 +1,9 @@
 import renderer from "react-test-renderer";
 import React from "react";
+import { render, screen } from "@testing-library/react";
 import Summary from "../Summary";
 
-test("renders Summary component correctly", () => {
+describe("Summary", () => {
   const transactions = [
     {
       id: "1a3e4b5c-6d7e-8f9a-bcde-0123456789ab",
@@ -38,9 +39,18 @@ test("renders Summary component correctly", () => {
       status: "NOT PAID",
     },
   ];
+  test("renders Summary component correctly", () => {
+    const tree = renderer
+      .create(<Summary transactions={transactions} invoices={invoices} />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 
-  const tree = renderer
-    .create(<Summary transactions={transactions} invoices={invoices} />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+  test("number of invoice should be 1", () => {
+    const { getByText } = render(
+      <Summary transactions={transactions} invoices={invoices} />
+    );
+    const element = screen.getByTestId("number-of-invoices");
+    expect(element.textContent).toBe("1");
+  });
 });

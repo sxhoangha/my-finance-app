@@ -62,11 +62,13 @@ const Summary = ({ transactions, invoices }: SummaryProps) => {
 
       <div>
         Total number of invoices in the last 30 days:{" "}
-        {
-          invoices.filter(({ creationDate }) =>
-            dayjs(creationDate).isAfter(dayjs(new Date()).subtract(30, "day"))
-          ).length
-        }
+        <span data-testid="number-of-invoices">
+          {
+            invoices.filter(({ creationDate }) =>
+              dayjs(creationDate).isAfter(dayjs(new Date()).subtract(30, "day"))
+            ).length
+          }
+        </span>
       </div>
 
       <SummaryModal

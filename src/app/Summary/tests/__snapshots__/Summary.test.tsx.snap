@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders Summary component correctly 1`] = `
+exports[`Summary renders Summary component correctly 1`] = `
 <div
   className="fi-summary"
 >
@@ -9,33 +9,9 @@ exports[`renders Summary component correctly 1`] = `
   >
     Summary
   </h4>
-  <style
-    dangerouslySetInnerHTML={
-      {
-        "__html": ".css-1u3bzj6-MuiFormControl-root-MuiTextField-root{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;min-width:0;padding:0;margin:0;border:0;vertical-align:top;}",
-      }
-    }
-    data-emotion="css 1u3bzj6-MuiFormControl-root-MuiTextField-root"
-  />
   <div
     className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
   >
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-1eg14f6-MuiInputLabel-root{display:block;transform-origin:top left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(133% - 24px);position:absolute;left:0;top:0;-webkit-transform:translate(12px, 7px) scale(0.75);-moz-transform:translate(12px, 7px) scale(0.75);-ms-transform:translate(12px, 7px) scale(0.75);transform:translate(12px, 7px) scale(0.75);-webkit-transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;z-index:1;pointer-events:auto;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}",
-        }
-      }
-      data-emotion="css 1eg14f6-MuiInputLabel-root"
-    />
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-o943dk-MuiFormLabel-root-MuiInputLabel-root{color:rgba(0, 0, 0, 0.6);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;letter-spacing:0.00938em;padding:0;position:relative;display:block;transform-origin:top left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(133% - 24px);position:absolute;left:0;top:0;-webkit-transform:translate(12px, 7px) scale(0.75);-moz-transform:translate(12px, 7px) scale(0.75);-ms-transform:translate(12px, 7px) scale(0.75);transform:translate(12px, 7px) scale(0.75);-webkit-transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,max-width 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;z-index:1;pointer-events:auto;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}.css-o943dk-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{color:#1976d2;}.css-o943dk-MuiFormLabel-root-MuiInputLabel-root.Mui-disabled{color:rgba(0, 0, 0, 0.38);}.css-o943dk-MuiFormLabel-root-MuiInputLabel-root.Mui-error{color:#d32f2f;}",
-        }
-      }
-      data-emotion="css o943dk-MuiFormLabel-root-MuiInputLabel-root"
-    />
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-filled MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-filled css-o943dk-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink={true}
@@ -44,34 +20,10 @@ exports[`renders Summary component correctly 1`] = `
     >
       Threshold
     </label>
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": "@-webkit-keyframes mui-auto-fill{from{display:block;}}@keyframes mui-auto-fill{from{display:block;}}@-webkit-keyframes mui-auto-fill-cancel{from{display:block;}}@keyframes mui-auto-fill-cancel{from{display:block;}}",
-        }
-      }
-      data-emotion="css-global 1prfaxn"
-    />
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-batk84-MuiInputBase-root-MuiFilledInput-root{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;letter-spacing:0.00938em;color:rgba(0, 0, 0, 0.87);box-sizing:border-box;position:relative;cursor:text;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;background-color:rgba(0, 0, 0, 0.06);border-top-left-radius:4px;border-top-right-radius:4px;-webkit-transition:background-color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:background-color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;}.css-batk84-MuiInputBase-root-MuiFilledInput-root.Mui-disabled{color:rgba(0, 0, 0, 0.38);cursor:default;}.css-batk84-MuiInputBase-root-MuiFilledInput-root:hover{background-color:rgba(0, 0, 0, 0.09);}@media (hover: none){.css-batk84-MuiInputBase-root-MuiFilledInput-root:hover{background-color:rgba(0, 0, 0, 0.06);}}.css-batk84-MuiInputBase-root-MuiFilledInput-root.Mui-focused{background-color:rgba(0, 0, 0, 0.06);}.css-batk84-MuiInputBase-root-MuiFilledInput-root.Mui-disabled{background-color:rgba(0, 0, 0, 0.12);}.css-batk84-MuiInputBase-root-MuiFilledInput-root::after{border-bottom:2px solid #1976d2;left:0;bottom:0;content:"";position:absolute;right:0;-webkit-transform:scaleX(0);-moz-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transition:-webkit-transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;transition:transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;pointer-events:none;}.css-batk84-MuiInputBase-root-MuiFilledInput-root.Mui-focused:after{-webkit-transform:scaleX(1) translateX(0);-moz-transform:scaleX(1) translateX(0);-ms-transform:scaleX(1) translateX(0);transform:scaleX(1) translateX(0);}.css-batk84-MuiInputBase-root-MuiFilledInput-root.Mui-error::before,.css-batk84-MuiInputBase-root-MuiFilledInput-root.Mui-error::after{border-bottom-color:#d32f2f;}.css-batk84-MuiInputBase-root-MuiFilledInput-root::before{border-bottom:1px solid rgba(0, 0, 0, 0.42);left:0;bottom:0;content:"\\00a0";position:absolute;right:0;-webkit-transition:border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;pointer-events:none;}.css-batk84-MuiInputBase-root-MuiFilledInput-root:hover:not(.Mui-disabled, .Mui-error):before{border-bottom:1px solid rgba(0, 0, 0, 0.87);}.css-batk84-MuiInputBase-root-MuiFilledInput-root.Mui-disabled:before{border-bottom-style:dotted;}",
-        }
-      }
-      data-emotion="css batk84-MuiInputBase-root-MuiFilledInput-root"
-    />
     <div
       className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-batk84-MuiInputBase-root-MuiFilledInput-root"
       onClick={[Function]}
     >
-      <style
-        dangerouslySetInnerHTML={
-          {
-            "__html": ".css-10botns-MuiInputBase-input-MuiFilledInput-input{font:inherit;letter-spacing:inherit;color:currentColor;padding:4px 0 5px;border:0;box-sizing:content-box;background:none;height:1.4375em;margin:0;-webkit-tap-highlight-color:transparent;display:block;min-width:0;width:100%;-webkit-animation-name:mui-auto-fill-cancel;animation-name:mui-auto-fill-cancel;-webkit-animation-duration:10ms;animation-duration:10ms;padding-top:25px;padding-right:12px;padding-bottom:8px;padding-left:12px;}.css-10botns-MuiInputBase-input-MuiFilledInput-input::-webkit-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-10botns-MuiInputBase-input-MuiFilledInput-input::-moz-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-10botns-MuiInputBase-input-MuiFilledInput-input:-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-10botns-MuiInputBase-input-MuiFilledInput-input::-ms-input-placeholder{color:currentColor;opacity:0.42;-webkit-transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-10botns-MuiInputBase-input-MuiFilledInput-input:focus{outline:0;}.css-10botns-MuiInputBase-input-MuiFilledInput-input:invalid{box-shadow:none;}.css-10botns-MuiInputBase-input-MuiFilledInput-input::-webkit-search-decoration{-webkit-appearance:none;}label[data-shrink=false]+.MuiInputBase-formControl .css-10botns-MuiInputBase-input-MuiFilledInput-input::-webkit-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-10botns-MuiInputBase-input-MuiFilledInput-input::-moz-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-10botns-MuiInputBase-input-MuiFilledInput-input:-ms-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-10botns-MuiInputBase-input-MuiFilledInput-input::-ms-input-placeholder{opacity:0!important;}label[data-shrink=false]+.MuiInputBase-formControl .css-10botns-MuiInputBase-input-MuiFilledInput-input:focus::-webkit-input-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-10botns-MuiInputBase-input-MuiFilledInput-input:focus::-moz-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-10botns-MuiInputBase-input-MuiFilledInput-input:focus:-ms-input-placeholder{opacity:0.42;}label[data-shrink=false]+.MuiInputBase-formControl .css-10botns-MuiInputBase-input-MuiFilledInput-input:focus::-ms-input-placeholder{opacity:0.42;}.css-10botns-MuiInputBase-input-MuiFilledInput-input.Mui-disabled{opacity:1;-webkit-text-fill-color:rgba(0, 0, 0, 0.38);}.css-10botns-MuiInputBase-input-MuiFilledInput-input:-webkit-autofill{-webkit-animation-duration:5000s;animation-duration:5000s;-webkit-animation-name:mui-auto-fill;animation-name:mui-auto-fill;}.css-10botns-MuiInputBase-input-MuiFilledInput-input:-webkit-autofill{border-top-left-radius:inherit;border-top-right-radius:inherit;}",
-          }
-        }
-        data-emotion="css 10botns-MuiInputBase-input-MuiFilledInput-input"
-      />
       <input
         aria-invalid={false}
         autoFocus={false}
@@ -104,22 +56,6 @@ exports[`renders Summary component correctly 1`] = `
     Total number of transactions: 
     2
      
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-da3c9u-MuiIconButton-root{text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-da3c9u-MuiIconButton-root:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-da3c9u-MuiIconButton-root:hover{background-color:transparent;}}.css-da3c9u-MuiIconButton-root.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}",
-        }
-      }
-      data-emotion="css da3c9u-MuiIconButton-root"
-    />
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-78trlr-MuiButtonBase-root-MuiIconButton-root{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;text-align:center;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;font-size:1.5rem;padding:8px;border-radius:50%;overflow:visible;color:rgba(0, 0, 0, 0.54);-webkit-transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;}.css-78trlr-MuiButtonBase-root-MuiIconButton-root::-moz-focus-inner{border-style:none;}.css-78trlr-MuiButtonBase-root-MuiIconButton-root.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-78trlr-MuiButtonBase-root-MuiIconButton-root{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-78trlr-MuiButtonBase-root-MuiIconButton-root:hover{background-color:rgba(0, 0, 0, 0.04);}@media (hover: none){.css-78trlr-MuiButtonBase-root-MuiIconButton-root:hover{background-color:transparent;}}.css-78trlr-MuiButtonBase-root-MuiIconButton-root.Mui-disabled{background-color:transparent;color:rgba(0, 0, 0, 0.26);}",
-        }
-      }
-      data-emotion="css 78trlr-MuiButtonBase-root-MuiIconButton-root"
-    />
     <button
       aria-label="Transaction details"
       aria-labelledby={null}
@@ -143,14 +79,6 @@ exports[`renders Summary component correctly 1`] = `
       tabIndex={0}
       type="button"
     >
-      <style
-        dangerouslySetInnerHTML={
-          {
-            "__html": ".css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}",
-          }
-        }
-        data-emotion="css i4bv87-MuiSvgIcon-root"
-      />
       <svg
         aria-hidden={true}
         className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
@@ -165,28 +93,19 @@ exports[`renders Summary component correctly 1`] = `
           d="M9 7h6v2H9zm7 0h2v2h-2zm-7 3h6v2H9zm7 0h2v2h-2z"
         />
       </svg>
+      <span
+        className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
     </button>
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-1433tg5-MuiTooltip-popper{z-index:1500;pointer-events:none;}",
-        }
-      }
-      data-emotion="css 1433tg5-MuiTooltip-popper"
-    />
-    <style
-      dangerouslySetInnerHTML={
-        {
-          "__html": ".css-179vq5o-MuiPopper-root-MuiTooltip-popper{z-index:1500;pointer-events:none;}",
-        }
-      }
-      data-emotion="css 179vq5o-MuiPopper-root-MuiTooltip-popper"
-    />
   </div>
   <div>
     Total number of invoices in the last 30 days:
      
-    1
+    <span
+      data-testid="number-of-invoices"
+    >
+      1
+    </span>
   </div>
   <div />
 </div>
