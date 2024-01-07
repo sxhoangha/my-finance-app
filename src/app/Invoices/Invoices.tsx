@@ -14,10 +14,11 @@ import {
 import NewInvoice from "./NewInvoice";
 import { formatDate } from "../utils";
 import Tooltip from "@mui/material/Tooltip";
+import useInvoices from "../hooks/useInvoices";
 
 interface InvoicesProps {
   invoices: Array<IInvoice>;
-  setInvoices: React.Dispatch<React.SetStateAction<IInvoice[]>>;
+  setInvoices: (invoices: IInvoice) => void;
 }
 
 const Invoices = ({ invoices, setInvoices }: InvoicesProps) => {
@@ -27,6 +28,9 @@ const Invoices = ({ invoices, setInvoices }: InvoicesProps) => {
   //Modal handlers
   const handleOpen = () => setOpenModal(true);
   const handleClose = () => setOpenModal(false);
+
+  //get from hooks
+  const { fetchInvoices } = useInvoices(setLoading, setInvoices);
 
   //DataGrid handlers
   const handleEditClick = (id: GridRowId) => () => {
@@ -87,18 +91,18 @@ const Invoices = ({ invoices, setInvoices }: InvoicesProps) => {
     },
   ];
 
-  const fetchInvoices = async () => {
-    setLoading(true);
-    try {
-      const response = await axios.get("/api/invoices");
-      const invoices = response.data.invoices;
-      setInvoices(invoices);
-    } catch (error) {
-      console.error("Error fetching invoices:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  // const fetchInvoices = async () => {
+  //   setLoading(true);
+  //   try {
+  //     const response = await axios.get("/api/invoices");
+  //     const invoices = response.data.invoices;
+  //     setInvoices(invoices);
+  //   } catch (error) {
+  //     console.error("Error fetching invoices:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   const onAddInvoiceSuccess = () => {
     handleClose();

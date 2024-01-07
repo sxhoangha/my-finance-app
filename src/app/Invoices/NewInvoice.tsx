@@ -25,7 +25,7 @@ const style = {
   p: 4,
 };
 
-interface FormValues {
+export interface AddInvoiceFormValues {
   clientName: string;
   creationDate: Date | string;
   referenceNumber: string;
@@ -46,7 +46,7 @@ const NewInvoice = ({
   onAddInvoiceSuccess,
   invoiceToEdit,
 }: NewInvoiceProps) => {
-  const addOrEditInvoice = async (values: FormValues) => {
+  const addOrEditInvoice = async (values: AddInvoiceFormValues) => {
     const apiRequest = invoiceToEdit ? axios.put : axios.post;
     const payload = {
       ...values,
@@ -62,15 +62,18 @@ const NewInvoice = ({
     }
   };
 
-  const handleSubmit = (values: FormValues, { setSubmitting }: any) => {
+  const handleSubmit = (
+    values: AddInvoiceFormValues,
+    { setSubmitting }: any
+  ) => {
     setTimeout(() => {
       setSubmitting(false);
       addOrEditInvoice(values);
     }, 500);
   };
 
-  const validateForm = (values: FormValues) => {
-    const errors: Partial<FormValues> = {};
+  const validateForm = (values: AddInvoiceFormValues) => {
+    const errors: Partial<AddInvoiceFormValues> = {};
     if (!values.clientName) {
       errors.clientName = "Required";
     }
