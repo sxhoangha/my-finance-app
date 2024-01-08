@@ -14,7 +14,11 @@ pnpm dev
 bun dev
 ```
 
-To run test, first rename .babelrc123 to .babelrc and then "npm run test". This, however will cause error when run "npm run dev" with NextJS 14.
+For test,
+
+```bash
+npm run dev
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
